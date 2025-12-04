@@ -19,8 +19,8 @@ public class MailUtilGmail {
         props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         props.put("mail.smtp.ssl.protocols", "TLSv1.2");
 
-        final String username = "viethoanggl05@gmail.com";   // Gmail của bạn
-        final String password = "hyoi msbf hecf bnlo";    // App Password
+        final String username = "trungnamute05@gmail.com";   // Gmail của bạn
+        final String password = "ucjz fynt dbva pfrm";    // App Password
 
         Session session = Session.getInstance(props,
                 new Authenticator() {
