@@ -40,7 +40,7 @@ public class EmailListServlet extends HttpServlet {
             
             // send email to user
             String to = email;
-            String from = "trungnamute05@gmail.com";
+            String from = "MS_w4beep@test-3m5jgrom5pmgdpyo.mlsender.net";
             String subject = "Welcome to our email list";
             String body = "Dear " + firstName + ",\n\n" +
                 "Thanks for joining our email list. We'll make sure to send " +

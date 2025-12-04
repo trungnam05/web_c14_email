@@ -10,17 +10,14 @@ public class MailUtilGmail {
                                 String subject, String body, boolean bodyIsHTML)
             throws MessagingException {
 
-        // Gmail SMTP using TLS (port 587)
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
-        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-        props.put("mail.smtp.ssl.protocols", "TLSv1.2");
+        props.put("mail.smtp.host", "smtp.mailersend.net");
+        props.put("mail.smtp.port", "587");   // ✔ Mailersend dùng 587
 
-        final String username = "trungnamute05@gmail.com";   // Gmail của bạn
-        final String password = "ucjz fynt dbva pfrm";    // App Password
+        final String username = "MS_w4beep@test-3m5jgrom5pmgdpyo.mlsender.net";     // ✔ chỉ dùng MS_xxxxx, KHÔNG phải email
+        final String password = "mssp.LvZUL7A.x2p034711j74zdrn.3m09FmN"; // ✔ API key SMTP thật
 
         Session session = Session.getInstance(props,
                 new Authenticator() {
@@ -41,7 +38,9 @@ public class MailUtilGmail {
             message.setText(body);
         }
 
+        // ✔ FROM PHẢI LÀ DOMAIN SANDBOX MAILERSEND
         message.setFrom(new InternetAddress(from));
+
         message.setRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
         Transport.send(message);
