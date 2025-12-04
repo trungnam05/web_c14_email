@@ -14,7 +14,7 @@ public class MailUtilGmail {
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.mailersend.net");
-        props.put("mail.smtp.port", "587");   // ✔ Mailersend dùng 587
+        props.put("mail.smtp.port", "2525");   // ✔ Mailersend dùng 587
 
         final String username = "MS_w4beep@test-3m5jgrom5pmgdpyo.mlsender.net";     // ✔ chỉ dùng MS_xxxxx, KHÔNG phải email
         final String password = "mssp.LvZUL7A.x2p034711j74zdrn.3m09FmN"; // ✔ API key SMTP thật
